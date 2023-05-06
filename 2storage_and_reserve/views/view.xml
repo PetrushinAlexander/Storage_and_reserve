@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="adding_button">
+        <field name="name">adding_button</field>
+        <field name="model">picking.transport.info</field>
+        <field name="inherit_id" ref="odoo_transport_management.picking_transport_info_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='picking_reschedule']" position="after">
+                <button name="reserve" string="Резервирование продукта" type="object" class="btn-primary"/>
+                <button name="reserve_cancel" string="Отмена резерва" type="object" class="btn-primary"/>
+                <field name="completion_status"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
